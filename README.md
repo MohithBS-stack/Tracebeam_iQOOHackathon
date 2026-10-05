@@ -5,6 +5,7 @@
 Team Lagnarok · iQOO Hackathon 2026 Grand Finale · Track: Community App
 
 > **Phase 1 concept prototype** — dated 5 Oct 2026. Runs as a static web app in Chrome.  
+> **Live Demo:** [https://tracebeam.vercel.app](https://tracebeam.vercel.app)  
 > The native Android build (Kotlin, Jetpack Compose, Nearby Connections) will be written inside the event window (9–11 Oct 2026).
 
 ---
