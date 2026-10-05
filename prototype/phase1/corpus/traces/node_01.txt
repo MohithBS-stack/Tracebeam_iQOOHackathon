@@ -1,0 +1,9 @@
+TypeError: Cannot read properties of undefined (reading 'map')
+    at Array.map (<anonymous>)
+    at processItems (/home/dev/project/src/utils.js:34:18)
+    at Object.<anonymous> (/home/dev/project/src/index.js:12:5)
+    at Module._compile (node:internal/modules/cjs/loader:1356:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+
+Node.js v20.11.0

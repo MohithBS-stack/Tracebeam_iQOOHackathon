@@ -1,0 +1,11 @@
+<resources>
+    <!-- Neo-brutal Signal Palette from DESIGN.md -->
+    <color name="signal_red">#FF2A2A</color>
+    <color name="signal_amber">#FFB800</color>
+    <color name="signal_emerald">#00D06C</color>
+    <color name="signal_cobalt">#1B3FD8</color>
+    <color name="signal_violet">#7B2FFE</color>
+    <color name="dark_base">#0D0F14</color>
+    <color name="dark_surface">#161922</color>
+    <color name="flag_white">#F5F6FA</color>
+</resources>

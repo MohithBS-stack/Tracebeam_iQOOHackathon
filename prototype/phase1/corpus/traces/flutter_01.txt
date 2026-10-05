@@ -1,0 +1,7 @@
+══╡ EXCEPTION CAUGHT BY FLUTTER FRAMEWORK ╞═══════════
+The following RenderFlex overflowed by 42 pixels on the right.
+The relevant error-causing widget was:
+  Row Row:file:///home/dev/myapp/lib/home_screen.dart:84:16
+Overflowed RenderFlex children: 3
+
+flutter 3.19.0, dart 3.3.0

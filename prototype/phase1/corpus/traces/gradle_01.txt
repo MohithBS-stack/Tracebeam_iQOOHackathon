@@ -1,0 +1,16 @@
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:externalNativeBuildDebug'.
+> Build command failed.
+  Error while executing process /usr/local/bin/cmake with arguments {...}
+  -- Could not find NDK.
+  CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+  
+  ninja: build stopped: subcommand failed.
+  Error: NDK version 26.1.10909125 is not installed.
+  Could not find NDK for ABI mismatch. Expected arm64-v8a but found armeabi-v7a.
+  Gradle version 8.2, compileSdk 34.
+
+* Try:
+Run with --stacktrace option to get the stack trace.

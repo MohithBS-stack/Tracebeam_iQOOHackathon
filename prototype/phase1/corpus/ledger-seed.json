@@ -1,0 +1,62 @@
+[
+  {
+    "id": "seed-001",
+    "fp": "a1b2c3d4e5f60001",
+    "fam": "gradle",
+    "cls": "BuildFailure",
+    "kw": ["ndk", "abi", "mismatch", "cmake", "arm64"],
+    "mh": [170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170,170],
+    "solvedAt": 1727980800,
+    "note": "Added abiFilters arm64-v8a in app/build.gradle. NDK version was mismatched – pinned to 25.2.9519653.",
+    "confirmed": true,
+    "synthetic": true
+  },
+  {
+    "id": "seed-002",
+    "fp": "b2c3d4e5f6071234",
+    "fam": "node",
+    "cls": "TypeError",
+    "kw": ["undefined", "cannot", "read", "property", "map"],
+    "mh": [187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187,187],
+    "solvedAt": 1728067200,
+    "note": "Added a null check before calling .map(). The API changed in v3.x and can return null instead of empty array.",
+    "confirmed": true,
+    "synthetic": true
+  },
+  {
+    "id": "seed-003",
+    "fp": "c3d4e5f607182abc",
+    "fam": "python",
+    "cls": "ModuleNotFoundError",
+    "kw": ["module", "found", "pip", "install", "venv"],
+    "mh": [204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204,204],
+    "solvedAt": 1727894400,
+    "note": "Virtual env was not activated. Run source .venv/bin/activate before the script.",
+    "confirmed": true,
+    "synthetic": true
+  },
+  {
+    "id": "seed-004",
+    "fp": "d4e5f607182abcde",
+    "fam": "java",
+    "cls": "NullPointerException",
+    "kw": ["null", "invoke", "string", "length", "activity"],
+    "mh": [221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221,221],
+    "solvedAt": 1727808000,
+    "note": "The value was null because the Bundle key name had a typo. Added a null check with a default value fallback.",
+    "confirmed": false,
+    "synthetic": true
+  },
+  {
+    "id": "seed-005",
+    "fp": "e5f607182abcdef0",
+    "fam": "flutter",
+    "cls": "FlutterError",
+    "kw": ["renderflex", "overflowed", "row", "pixels", "expanded"],
+    "mh": [238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238,238],
+    "solvedAt": 1727721600,
+    "note": "Wrapped the Row child in an Expanded widget. The Text widget had no max-width constraint.",
+    "confirmed": true,
+    "synthetic": true
+  }
+]

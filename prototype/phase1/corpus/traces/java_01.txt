@@ -1,0 +1,8 @@
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "<local1>" is null
+	at com.example.app.UserService.getUsername(UserService.java:42)
+	at com.example.app.MainActivity.onCreate(MainActivity.java:28)
+	at android.app.Activity.performCreate(Activity.java:8107)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1310)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3606)
+
+Java 17, compileSdkVersion 34

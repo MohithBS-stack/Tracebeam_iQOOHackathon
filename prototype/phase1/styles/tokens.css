@@ -1,0 +1,139 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Tracebeam – Design Tokens  (Phase 1)
+   Source: docs/DESIGN.md  §4 Palette, §5 Typography, §6 Tokens
+   Rule:   No raw hex anywhere except this file.
+   ═══════════════════════════════════════════════════════════════════ */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Martian+Mono:wght@400&display=swap");
+
+:root {
+  /* ── Colour palette ─────────────────────────────────────── */
+  --hoist-blue:      #1B3FD8;   /* brand, primary buttons, solved state */
+  --distress-red:    #E8262B;   /* stuck state, active flag fill – never as text on white */
+  --pennant-yellow:  #FFC72C;   /* helper match, highlights, focus shadow */
+  --black:           #000000;   /* outlines, hard shadows, text on light */
+  --flag-white:      #F5F7FA;   /* app background and cards */
+  --sea-mist:        #DCE3F1;   /* sunken areas: trace box, ledger rows */
+
+  /* ── Border & shadow ────────────────────────────────────── */
+  --border-width:    3px;
+  --border-chip:     2px;
+  --border:          var(--border-width) solid var(--black);
+  --border-thin:     var(--border-chip) solid var(--black);
+
+  /* Hard offset shadow – zero blur, always */
+  --shadow:          4px 4px 0 var(--black);
+  --shadow-press:    0   0   0 var(--black);
+  --shadow-focus:    4px 4px 0 var(--pennant-yellow);   /* focus state */
+
+  --radius:          0;   /* squares; flags are rectangles */
+
+  /* ── Spacing scale (4-base) ─────────────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-12: 48px;
+
+  /* ── Touch targets ──────────────────────────────────────── */
+  --target-min:     48px;
+  --target-primary: 56px;
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --font-display: "Archivo", sans-serif;
+  --font-body:    "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --font-mono:    "Martian Mono", ui-monospace, monospace;
+
+  /* Scale: Display 40/44, Heading 28/32, Subheading 22/28,
+            Body 16/24, Small 13/18, Trace 13/20            */
+  --text-display:    40px;
+  --lh-display:      44px;
+  --text-heading:    28px;
+  --lh-heading:      32px;
+  --text-subhead:    22px;
+  --lh-subhead:      28px;
+  --text-body:       16px;
+  --lh-body:         24px;
+  --text-small:      13px;
+  --lh-small:        18px;
+  --text-trace:      13px;
+  --lh-trace:        20px;
+
+  /* ── Animation ──────────────────────────────────────────── */
+  --duration-hoist: 600ms;
+  --duration-press: 80ms;
+  --duration-sheet: 280ms;
+  --ease-hard-stop: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* ── Global reset ───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family:      var(--font-body);
+  font-size:        var(--text-body);
+  line-height:      var(--lh-body);
+  color:            var(--black);
+  background-color: var(--flag-white);
+  min-height:       100dvh;
+  /* Centre the prototype in a phone-width column on desktop */
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+}
+
+/* ── Typography helpers ─────────────────────────────────── */
+.display {
+  font-family:  var(--font-display);
+  font-weight:  900;
+  font-stretch: 125%;
+  font-size:    var(--text-display);
+  line-height:  var(--lh-display);
+  letter-spacing: -0.005em;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 125%;
+  font-size:   var(--text-heading);
+  line-height: var(--lh-heading);
+}
+
+.subheading {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size:   var(--text-subhead);
+  line-height: var(--lh-subhead);
+}
+
+.body-text {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size:   var(--text-body);
+  line-height: var(--lh-body);
+}
+
+.small-text {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size:   var(--text-small);
+  line-height: var(--lh-small);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size:   var(--text-trace);
+  line-height: var(--lh-trace);
+}

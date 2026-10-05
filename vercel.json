@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "name": "tracebeam",
+  "cleanUrls": true,
+  "outputDirectory": "prototype/phase1"
+}

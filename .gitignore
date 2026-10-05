@@ -1,0 +1,120 @@
+# ─────────────────────────────────────────────
+# Tracebeam – .gitignore
+# Phase 1 web prototype + future Android build
+# ─────────────────────────────────────────────
+
+# ── OS artefacts ──────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# ── Editor / IDE ──────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.suo
+*.user
+.project
+.classpath
+.settings/
+
+# ── Environment & secrets ─────────────────────
+# NEVER commit real secrets. Phase 1 uses no API keys.
+# The .env file is listed here as a safety net even though
+# Phase 1 has no server-side runtime that needs one.
+.env
+.env.local
+.env.*.local
+
+# ── Node / npm ────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.cache/
+dist/
+.parcel-cache/
+
+# ── Build artefacts (Phase 1 has no bundler, but guard anyway)
+.vercel/
+build/
+out/
+.next/
+.nuxt/
+
+# ── Android (Finale build) ────────────────────
+android/.gradle/
+android/local.properties
+android/.idea/
+android/app/build/
+android/build/
+android/*.keystore
+android/**/*.keystore
+# Keep the android/ folder tracked (it documents the finale structure)
+# but ignore the generated build outputs above
+
+# ── Kotlin / Gradle ───────────────────────────
+*.class
+*.jar
+*.aar
+*.ap_
+*.apk
+*.aab
+.kotlin/
+
+# ── Test output ───────────────────────────────
+coverage/
+lcov.info
+*.lcov
+test-results/
+junit.xml
+
+# ── Corpus – real traces are NEVER committed ──
+# Only fake/synthetic traces go in corpus/traces/.
+# Add real developer traces to this ignore list.
+corpus/traces/REAL_*
+corpus/traces/real_*
+
+# ── Voice notes – audio is user data, not repo data ──
+*.wav
+*.mp3
+*.m4a
+*.opus
+*.ogg
+prototype/phase1/audio/
+
+# ── Exported fix cards that land in the repo accidentally ──
+# Fix cards should be exported to the laptop, not committed.
+fix-cards/
+*.fixcard.md
+
+# ── Evidence directory ────────────────────────
+# Evidence files (npu logs, tuning reports) ARE committed intentionally.
+# Individual run logs that are regenerated on every build are not.
+docs/evidence/*.log
+docs/evidence/*.tmp
+
+# ── Temporary / scratch ───────────────────────
+tmp/
+temp/
+scratch/
+*.tmp
+*.bak
+
+# ── Tesseract OCR language data (large, loaded from CDN in Phase 1) ──
+prototype/phase1/tessdata/
+
+# ── LiteRT / TensorFlow Lite model files (finale, large binaries) ──
+android/app/src/main/assets/*.tflite
+android/app/src/main/assets/*.bin
+android/app/src/main/assets/*.task
+
+.vercel

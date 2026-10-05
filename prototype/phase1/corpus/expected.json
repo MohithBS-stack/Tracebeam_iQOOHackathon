@@ -1,0 +1,12 @@
+{
+  "traces": {
+    "python_01.txt":       { "family": "python", "cls": "ModuleNotFoundError", "signatureExpected": true },
+    "python_secret_01.txt":{ "family": "python", "cls": "AttributeError",      "signatureExpected": true, "secretSeeded": true },
+    "gradle_01.txt":       { "family": "gradle", "cls": "BuildFailure",         "signatureExpected": true },
+    "node_01.txt":         { "family": "node",   "cls": "TypeError",            "signatureExpected": true },
+    "java_01.txt":         { "family": "java",   "cls": "NullPointerException", "signatureExpected": true },
+    "flutter_01.txt":      { "family": "flutter","cls": "FlutterError",         "signatureExpected": true }
+  },
+  "secrets": ["secretpassword123", "eyJhbGciOiJIUzI1NiJ9", "AKIAFAKEKEY1234567890ABCDEF", "verylongsecrettoken1234567890abcdefghijklmnop"],
+  "negatives": []
+}

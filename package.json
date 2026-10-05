@@ -1,0 +1,23 @@
+{
+  "name": "tracebeam",
+  "version": "0.1.0",
+  "description": "Tracebeam Phase 1 prototype - on-device error flag broadcasting and peer matching",
+  "type": "module",
+  "scripts": {
+    "test": "node --test prototype/phase1/tests/signature.test.mjs prototype/phase1/tests/match.test.mjs prototype/phase1/tests/redaction.test.mjs",
+    "build": "npm test",
+    "start": "npx -y serve prototype/phase1",
+    "dev": "npx -y serve prototype/phase1",
+    "office-kit": "node office-kit/watch.mjs"
+  },
+  "keywords": [
+    "tracebeam",
+    "hackathon",
+    "iqoo-2026",
+    "mesh",
+    "developer-tools",
+    "privacy-first"
+  ],
+  "author": "Team Lagnarok",
+  "license": "MIT"
+}

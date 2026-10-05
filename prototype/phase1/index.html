@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1B3FD8" />
+  <meta name="description" content="When you hit an error, Tracebeam quietly finds the nearby developer who has already fixed it. No internet. No cloud. Runs on your phone." />
+  <title>Tracebeam – Find someone nearby who has fixed this</title>
+
+  <!-- Fonts (loaded from network – Phase 1 only; finale bundles TTF) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Design tokens & components -->
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+
+  <style>
+    /* Phase 1 page-level layout */
+    #app-root {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    /* Prototype notice banner */
+    .prototype-badge {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 390px;
+      background: var(--pennant-yellow);
+      border-bottom: var(--border);
+      padding: var(--space-1) var(--space-4);
+      font-size: 11px;
+      font-weight: 700;
+      text-align: center;
+      z-index: 9999;
+    }
+    /* Push content below the prototype badge */
+    #app {
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Phase 1 prototype watermark – remove for finale build -->
+  <div class="prototype-badge" role="note">
+    Phase 1 concept prototype · Team Lagnarok · iQOO Hackathon 2026
+  </div>
+
+  <div id="app-root">
+    <div id="app">
+      <!-- Hoist animation overlay (shared across screens) -->
+      <div id="hoist-overlay" hidden aria-live="assertive"></div>
+
+      <!-- Match alert overlay (bottom sheet, helper side) -->
+      <div id="alert-overlay" hidden></div>
+
+      <!-- Screen containers – rendered by JS -->
+      <div id="screen-container">
+        <!-- Screens mount here -->
+      </div>
+
+      <!-- Bottom navigation bar -->
+      <nav class="bottom-bar" aria-label="Main navigation">
+        <button
+          class="bottom-bar__tab"
+          id="tab-listening"
+          role="tab"
+          aria-selected="true"
+          aria-controls="screen-container"
+          data-screen="listening"
+        >
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2"/>
+            <circle cx="10" cy="10" r="3" fill="currentColor"/>
+          </svg>
+          Listening
+        </button>
+
+        <button
+          class="bottom-bar__raise"
+          id="btn-raise-flag"
+          aria-label="Raise a flag"
+          data-screen="raise"
+        >
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 21V3M4 3L18 8L4 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
+          </svg>
+          Raise a flag
+        </button>
+
+        <button
+          class="bottom-bar__tab"
+          id="tab-ledger"
+          role="tab"
+          aria-selected="false"
+          aria-controls="screen-container"
+          data-screen="ledger"
+        >
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="3" y="3" width="14" height="14" stroke="currentColor" stroke-width="2"/>
+            <path d="M7 8h6M7 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+          Ledger
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- App entry point -->
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
